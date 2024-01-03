@@ -10,3 +10,21 @@ Start your 3D journey with 3DPointCloudLab and uncover the hidden dimensions of 
 
 ![Alt text](Images/Results-3d.png)
 
+# Using Dense Vision Transformers (DVT) for Enhanced Dense Prediction Tasks
+In our project, we're excited to leverage the cutting-edge Dense Vision Transformers (DVT), a novel architecture that fundamentally transforms the way we approach dense prediction tasks in computer vision. DVT stands at the forefront of innovation, replacing traditional convolutional networks with vision transformers, thereby redefining efficiency and accuracy in our models.
+
+![Alt text](Images/architecture_dpt.png)
+
+# Key Highlights of DVT in Our Project:
+**Transformer Backbone:** At the heart of DVT is the vision transformer (ViT) which operates on a high-resolution and maintains a global receptive field at every stage. This backbone ensures that our model processes representations with consistent spatial resolution throughout, making it highly effective for tasks requiring detailed spatial understanding.
+
+**Enhanced Image Representation:** DVT assembles tokens from various stages of the transformer into multi-resolution image-like representations. These representations are then combined using a convolutional decoder into full-resolution predictions, capturing finer details more coherently compared to traditional fully-convolutional networks.
+
+**Global Receptive Field:** Unlike convolutional networks that increase their receptive field through successive layers, the transformer in DVT maintains a global receptive field from the start. This characteristic allows for more globally coherent predictions and a better understanding of the overall scene.
+
+**State-of-the-Art Performance:** Our implementation of DVT has shown substantial improvements on a variety of dense prediction tasks. Notably, in monocular depth estimation, we've observed up to a 28% improvement in relative performance over state-of-the-art fully-convolutional networks.
+
+**Versatility Across Datasets:** The architecture has proven its mettle across different scales of data. From setting new benchmarks on the ADE20K dataset in semantic segmentation (achieving 49.02% mIoU) to excelling on smaller datasets like NYUv2, KITTI, and Pascal Context, DVT adapts and excels universally.
+
+
+
