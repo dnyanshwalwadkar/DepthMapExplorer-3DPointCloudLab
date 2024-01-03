@@ -26,5 +26,24 @@ In our project, we're excited to leverage the cutting-edge Dense Vision Transfor
 
 **Versatility Across Datasets:** The architecture has proven its mettle across different scales of data. From setting new benchmarks on the ADE20K dataset in semantic segmentation (achieving 49.02% mIoU) to excelling on smaller datasets like NYUv2, KITTI, and Pascal Context, DVT adapts and excels universally.
 
+# 02. ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth
+
+Our second depth model, ZoeD-M12-NK, represents a breakthrough in single-image depth estimation, merging the strengths of relative and metric depth estimation into a cohesive framework. This model is distinguished by its exceptional generalization capabilities and adherence to metric scale, setting new standards in depth estimation accuracy and versatility.
+![Alt text](Images/architecture_Zoe.png)
+
+**Key Innovations and Features:**
+Hybrid Training Approach: ZoeD-M12-NK is uniquely pre-trained on 12 diverse datasets for relative depth estimation and subsequently fine-tuned on two specific datasets for metric depth. This hybrid training strategy enhances the model's adaptability and precision across various domains.
+
+**Metric Bins Module:** A novel component in our architecture, the metric bins module efficiently adjusts bin centers at different decoder layers, unlike traditional methods that rely on splitting bins. This adjustment is driven by attractor points predicted for each pixel, leading to more accurate and refined depth estimations.
+
+**Attractor Layers:** Our model introduces an innovative concept of attractor layers, where bin centers are dynamically adjusted (attracted) based on the depth interval. This strategy refines the depth prediction process, allowing for more precise and focused depth estimations as the decoder layers progress.
+
+**Log-binomial Probability Distribution:** Moving away from the conventional softmax approach, we employ a log-binomial distribution for predicting probabilities over bin centers. This method acknowledges the ordinal nature of bins, ensuring a more realistic probability distribution and enhancing the overall accuracy of depth predictions.
+
+**Unified Training and Generalization:** ZoeD-M12-NK stands out for its ability to train jointly on multiple datasets (e.g., NYU Depth v2 and KITTI) without significant performance degradation. Furthermore, it exhibits unprecedented zero-shot generalization to eight unseen datasets, encompassing both indoor and outdoor environments.
+
+**Performance and Impact:**
+ZoeD-M12-NK has demonstrated significant improvements over existing state-of-the-art models. On the NYU Depth v2 indoor dataset, it achieves a remarkable 21% improvement in terms of relative absolute error (REL). Its ability to train across multiple datasets and generalize to new, unseen datasets marks a significant advancement in the field of depth estimation.
+![Alt text](Images/Zoe_Results.png)
 
 
